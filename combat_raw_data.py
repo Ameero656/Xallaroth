@@ -1,4 +1,4 @@
-combatRawData = {
+combat_raw_data = {
     'skills': {
         'Solar Flare': {
             'attributeType': ['light', 'magic'],
