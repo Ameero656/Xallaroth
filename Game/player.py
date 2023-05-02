@@ -22,25 +22,17 @@ class Player:
             print("You do not have enough XP to level up yet.")
 
     def import_player(self, id):
-
-
         self.player_id = f'Game/Saves/{id}.json'
-
         with open(self.player_id, "r") as file:
             player_json = file.read()
 
         player_data = json.loads(player_json)
-
         self.__dict__.update(player_data)
 
     def export_player(self):
         self.player.player_id = input("Export player as:")
-
         player_json = json.dumps(self.player.__dict__)
-
         player_id = f'Game/Saves/{self.player_id}.json'
-
-        # Write the JSON data to a file
         with open(player_id, "w") as file:
             file.write(player_json)
 

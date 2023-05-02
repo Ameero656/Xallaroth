@@ -20,25 +20,23 @@ rev_key = {'p': 'player', 0: 'none', -1: 'void', 1: 'obstacle', 'enemy': 'e'}
 
 
 def validate_movement(move_pos, controller_pos, movement, level):
-
     px, py = controller_pos
     x, y = move_pos
-
     distance = abs(py-y) + abs(px-x)
     print('d=', distance)
     if distance > movement:
         print('Insufficient movement for specified location')
         return False
+    
     if level[x][y] != key['none']:
         print('Obstacle in the way')
         return False
+    
     print('Sufficient distance for specified location')
     return True
 def get_id_pos(level, id):
     global key
-
     x, y = 0, 0
-
     for y, col in enumerate(level):
         for x, point in enumerate(col):
             if point == id:
@@ -47,7 +45,6 @@ def get_id_pos(level, id):
 
 def move(pos, movement, level, id): # {pos} is tuple
     global key
-
     x, y = pos
     controller_pos = get_id_pos(level, id) # returns tuple: (x, y)
     if validate_movement(pos, controller_pos, movement, level):
@@ -56,18 +53,16 @@ def move(pos, movement, level, id): # {pos} is tuple
 
 
 def display_level(level):
-
     for row in level:
         for point in row:
             print('|', end = '')
             print(point, end = '')
+            
         print('|')
 
 def main(level, *args):
-    
     levels = {'0' : level0}
     level = levels[level]
-
     display_level(level)
     id = input("id:")
     x = int(input('x:'))
