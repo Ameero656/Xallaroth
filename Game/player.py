@@ -10,6 +10,11 @@ class Player:
         self.base_resource = self.level*20
         self.equipment = {}
         self.abilities = {}
+        self.inventory = {}
+        self.inventory['materials'] = {}
+        self.inventory['weapons'] = {}
+        self.inventory['materials']['xallarock'] = 0
+        self.inventory['materials']['gold_ore'] = 0
 
     def level_up(self):
         overflow_xp = self.current_xp - self.needed_xp

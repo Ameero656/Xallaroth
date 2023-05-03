@@ -16,8 +16,13 @@ def select_character():
     player.import_player(id)
     show_player_stats(player)
     return player
+
 def forge():
-    pass
+    i = input("Do you want item?")
+    if i == 'y':
+        player.inventory['weapons']['sword'] = {
+            'damage' : 10
+        }
 
 def world_map():
     level = input("Level:")
@@ -29,7 +34,10 @@ def merchant():
     pass
 
 def inventory():
-    pass
+    print("INVENTORY:")
+    for item in player.inventory:
+        print(f'{item}/{player.inventory[item]}')
+        
 
 def equipment():
     pass
@@ -45,16 +53,16 @@ options = {
 if __name__ == '__main__':
 
     player = select_character()
-
-    print(f'''
+    while True:
+        print(f'''
 {player.player_id} is currently at town.
-1. Go to Forge
-2. Go to World Map
-3. Go to Merchant
-4. Access Inventory
-5. Access Equipment''')
+    1. Go to Forge
+    2. Go to World Map
+    3. Go to Merchant
+    4. Access Inventory
+    5. Access Equipment''')
 
-    option = input("Where to go (1-5):")
+        option = input("Where to go (1-5):")
 
-    if option in options:
-        options[option]()
+        if option in options:
+            options[option]()
