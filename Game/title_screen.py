@@ -1,4 +1,4 @@
-import combat
+import forge, world_map, shop 
 from player import Player
 
 
@@ -17,37 +17,30 @@ def select_character():
     show_player_stats(player)
     return player
 
-def forge():
-    i = input("Do you want item?")
-    if i == 'y':
-        player.inventory['weapons']['sword'] = {
-            'damage' : 10
-        }
+def go_forge():
+    forge.main()
 
-def world_map():
-    level = input("Level:")
-    if level == '0':
-        combat.main(level)
-    pass
+def go_world_map():
+    world_map.main()
 
-def merchant():
-    pass
+def go_shop():
+    shop.main()
 
-def inventory():
+def go_inventory():
     print("INVENTORY:")
     for item in player.inventory:
         print(f'{item}/{player.inventory[item]}')
         
 
-def equipment():
+def go_equipment():
     pass
 
 options = {
-    '1': forge,
-    '2': world_map,
-    '3': merchant,
-    '4': inventory,
-    '5': equipment
+    '1': go_forge,
+    '2': go_world_map,
+    '3': go_shop,
+    '4': go_inventory,
+    '5': go_equipment
 }
 
 if __name__ == '__main__':
