@@ -1,0 +1,47 @@
+
+
+Player Level:
+
+    - Range: 1, 100
+    - Obtaining:
+        - Xp - Gained from killing Mobs & completing Mission goals
+    - Cost:
+        - Each level costs level^2 + 50 XP
+    - Benifits:
+        - Find higher level gear respective to your current level
+        - Higher Base stats
+            - Damage, HP, Resource
+        - Unlock different mechanics in game
+        - Skill Points
+            - Obtaining:
+                - Every level comes with 5 skill points, allocated to player's choosing
+                    - Dexterity
+                        - Overview:
+                            - Range/ Melee
+                            - High Mobility and Doge, as well as more actions in a round with more combos
+                        - Specialized Effects:
+                            - AOE, Single Target, Fast, High Mobility
+                        - Negative Effects:
+                            - Low Damage
+                        - Ability Types:
+                            - Movement, Backstabs, Arrow Attacks, Knife Attacks, Invisibility
+                    - Strength
+                        - Overview:
+                            - Melee
+                            - High Attack & Tankiness
+                        - Specialized Effects:
+                            - AOE, Single Target, Tank
+                        - Negative Effects:
+                            - Low Healing
+                        - Ability Types:
+                            - Encantations, Physical Attacks
+                    - Mana
+                        - Overview:
+                            - High Attack, Low Defense
+                            - Range/ Melee
+                        - Specialized Effects:
+                            - AOE, Single Target, Crowd-control, Mind-control
+                        - Negative Effects:
+                            - Low Health
+                        - Ability Types:
+                            - Spells, Encantations, Magic Attacks
